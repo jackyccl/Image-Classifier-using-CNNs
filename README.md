@@ -83,4 +83,6 @@ for dense_layer in dense_layers:
 ```
 
 and we will combine the above for loop into out model and named it as "cnn2.py" and train the model. The result from the tensorboard is:
-![image](https://user-images.githubusercontent.com/46767764/51964822-a864f000-24a2-11e9-8d04-f023d990f994.png)
+<p align="center"> 
+<img src="https://user-images.githubusercontent.com/46767764/51964822-a864f000-24a2-11e9-8d04-f023d990f994.png">
+</p>
