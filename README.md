@@ -57,7 +57,9 @@ model.fit(X,y,batch_size = 32,epochs=10,validation_split=0.3,callbacks=[tensorbo
 ```
 
 Hence, I have attached a few results from tensorboard with 10 epochs as shown below.
-<img width="348" alt="second-model-tensorboard" src="https://user-images.githubusercontent.com/46767764/51964027-3a1f2e00-24a0-11e9-916e-71850fe09433.png">
+<p align="center"> 
+<img src="https://user-images.githubusercontent.com/46767764/51964027-3a1f2e00-24a0-11e9-916e-71850fe09433.png">
+</p>
 
 #### Discussion:
 Notice the shape of validation loss. Loss is the measure of error. After 4th epoch, the validation loss starts to increase, but interestingly, the validation accuracy continued to hold. This should alert you that you are almost certainly beginning to over-fit. The reason is the model is constantly trying to decrease our in-sample loss, at some point, rather than learning general patterns about the actual datas, the model begins to memorize input data. In this case, any new data attempt to feed the model, it will results in poor judgement.
