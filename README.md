@@ -1,4 +1,4 @@
-# image-classifier-using-CNNs
+# Image-Classifier-using-CNNs
 
 In this project, we are going to perform deep learning with Python, Tensorflow and Keras. Following the release of deep learning libraries (i.e. Tensorflow), one of the higher-level API-like libraries that sit on top of tensorflow and has easily become the most popular is Keras.
 
