@@ -2,7 +2,14 @@
 
 In this project, we are going to perform deep learning with Python, Tensorflow and Keras. Following the release of deep learning libraries (i.e. Tensorflow), one of the higher-level API-like libraries that sit on top of tensorflow and has easily become the most popular is Keras.
 
-Previously, I did a tutorial on using [ImageNet for transfer learning](https://github.com/jackyccl/Image-Classifier-Using-Transfer-Learning). In this tutorial, I will build my own model to classify the pictures between dogs and cats. Now, let's get start.
+Previously, I did a tutorial on using [ImageNet for transfer learning](https://github.com/jackyccl/Image-Classifier-Using-Transfer-Learning). In this tutorial, I will build my own model to classify the pictures between dogs and cats. I will first attach procedures to open file, however it is encouraged to read through the steps for better understanding. Now, let's get start.
+
+### Procedures to open training file:
+1. Open "training_data.py"
+2. Open "cnn_final.py"
+3. Copy the directory of images that you want to detect
+4. Paste inside line 16 of "use_model.py" and run it
+5. See the classification!!
 
 ### Step 1: Install Tensorflow and Keras
 To install TensorFlow, simply do a:
