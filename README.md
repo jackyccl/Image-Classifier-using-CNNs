@@ -39,7 +39,6 @@ Follow this [link](https://pythonprogramming.net/convolutional-neural-network-de
 
 After just three epochs, we have around 71% validation accuracy. One way to increase the accuracy is that we could increase the epochs.  In this case, we can also use TensorBoard, which comes with TensorFlow which helps us visualize our models as they trained.
 
-#### The python file named "cnn.py" covers step 3
 
 ### Step 4: Analyzing Models with TensorBoard
 To begin, we need to add the following to our imports:
@@ -59,3 +58,29 @@ model.fit(X,y,batch_size = 32,epochs=10,validation_split=0.3,callbacks=[tensorbo
 
 Hence, I have attached a few results from tensorboard with 10 epochs as shown below.
 <img width="348" alt="second-model-tensorboard" src="https://user-images.githubusercontent.com/46767764/51964027-3a1f2e00-24a0-11e9-916e-71850fe09433.png">
+
+#### Discussion:
+Notice the shape of validation loss. Loss is the measure of error. After 4th epoch, the validation loss starts to increase, but interestingly, the validation accuracy continued to hold. This should alert you that you are almost certainly beginning to over-fit. The reason is the model is constantly trying to decrease our in-sample loss, at some point, rather than learning general patterns about the actual datas, the model begins to memorize input data. In this case, any new data attempt to feed the model, it will result in poor judgement.
+
+#### The python file named "cnn.py" covers step 3 and 4
+
+### Step 5: Optimizing our Model based on TensorBoard
+The most basic things is to modify nodes per layer and layers, as well as 0,1,or 2 dense layers.
+we can do it using a simple [for-loop]{https://pythonprogramming.net/tensorboard-optimizing-models-deep-learning-python-tensorflow-keras/?completed=/tensorboard-analysis-deep-learning-python-tensorflow-keras/} like:
+
+```
+import time
+
+dense_layers = [0,1,2]
+layer_sizes = [32, 64, 128]
+conv_layers = [1, 2, 3]
+
+for dense_layer in dense_layers:
+    for layer_size in layer_sizes:
+        for conv_layer in conv_layers:
+            NAME = "{}-conv-{}-nodes-{}-dense-{}".format(conv_layer, layer_size, dense_layer, int(time.time()))
+            print(NAME)
+```
+
+and we will combine the above for loop into out model and named it as "cnn2.py" and train the model. The result from the tensorboard is:
+![image](https://user-images.githubusercontent.com/46767764/51964822-a864f000-24a2-11e9-8d04-f023d990f994.png)
