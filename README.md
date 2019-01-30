@@ -31,6 +31,6 @@ Last but not least, we save our data in ```.pickle``` so that we don't need to k
 The Convolutional Neural Netwrok is currently the state of the art for detecting what an image is or what is contained in the image.
 
 The basic CNN structure is as follows: Convolution -> Pooling -> Convolution -> Pooling -> Fully Connected Layer -> Output
-*Convolution - take the original data and creating feature maps from it
-*Pooling - down sampling, most often in the form of "max-pooling", where we select a region and then take the maximum value in that region, and that becomes the new value for the entire region.
-*Fully connected layers - typical nueral networkds, where all nodes are "fully connected". The convolutional layers are not fully connected like a traditional neural network.
+..* Convolution - take the original data and creating feature maps from it
+..* Pooling - down sampling, most often in the form of "max-pooling", where we select a region and then take the maximum value in that region, and that becomes the new value for the entire region.
+..* Fully connected layers - typical nueral networkds, where all nodes are "fully connected". The convolutional layers are not fully connected like a traditional neural network.
