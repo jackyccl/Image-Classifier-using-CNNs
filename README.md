@@ -60,7 +60,7 @@ Hence, I have attached a few results from tensorboard with 10 epochs as shown be
 <img width="348" alt="second-model-tensorboard" src="https://user-images.githubusercontent.com/46767764/51964027-3a1f2e00-24a0-11e9-916e-71850fe09433.png">
 
 #### Discussion:
-Notice the shape of validation loss. Loss is the measure of error. After 4th epoch, the validation loss starts to increase, but interestingly, the validation accuracy continued to hold. This should alert you that you are almost certainly beginning to over-fit. The reason is the model is constantly trying to decrease our in-sample loss, at some point, rather than learning general patterns about the actual datas, the model begins to memorize input data. In this case, any new data attempt to feed the model, it will result in poor judgement.
+Notice the shape of validation loss. Loss is the measure of error. After 4th epoch, the validation loss starts to increase, but interestingly, the validation accuracy continued to hold. This should alert you that you are almost certainly beginning to over-fit. The reason is the model is constantly trying to decrease our in-sample loss, at some point, rather than learning general patterns about the actual datas, the model begins to memorize input data. In this case, any new data attempt to feed the model, it will results in poor judgement.
 
 #### The python file named "cnn.py" covers step 3 and 4
 
@@ -82,7 +82,22 @@ for dense_layer in dense_layers:
             print(NAME)
 ```
 
-and we will combine the above for loop into out model and named it as "cnn2.py" and train the model. The result from the tensorboard is:
+and we will combine the above for loop into out model and named it as "cnn2.py" and train the model. The results from the tensorboard are:
 <p align="center"> 
 <img src="https://user-images.githubusercontent.com/46767764/51964822-a864f000-24a2-11e9-8d04-f023d990f994.png">
+</p>
+
+#### Discussion
+Although the results are not similar to [this](https://pythonprogramming.net/tensorboard-optimizing-models-deep-learning-python-tensorflow-keras/?completed=/tensorboard-analysis-deep-learning-python-tensorflow-keras/), however it shows almost the same trends. Normally, it is tempting to take highest validation accuracy model, but I tend to choose lowest (best) validation loss models. The models with 0 dense layers seemed to do better overall.
+
+Zooming into validation accuracy graph, Here are the top 5:
+3 conv, 64 nodes per layer, 0 dense
+3 conv, 128 nodes per layer, 0 dense
+3 conv, 32 nodes per layer, 0 dense
+3 conv, 32 nodes per layer, 1 dense
+3 conv, 64 nodes per layer, 2 dense
+
+From here, we can be comfortable with 0 dense, and 3 convolutional layers. Results for top 3 models:
+<p align="center"> 
+<img src="https://user-images.githubusercontent.com/46767764/51965493-b4ea4800-24a4-11e9-95f6-28374b9c2f53.png">
 </p>
