@@ -25,7 +25,7 @@ Besides, we also need to shuffle the data. This is to avoid the condition that t
 
 Last but not least, we save our data in ```.pickle``` so that we don't need to keep calculating it every time. 
 
-#### Note: The python file named "training_data.py" basically covers the whole step 2, and I wrote some comments at the side of the code. 
+#### Note: The python file named "training_data.py" basically covers step 2.
 
 ### Step 3: Convolutional Neural Networks
 The Convolutional Neural Netwrok is currently the state of the art for detecting what an image is or what is contained in the image.
