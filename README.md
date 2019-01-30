@@ -120,13 +120,19 @@ Now just upload some images to test our model. Again, we grayscaled, resized and
 Then load our model and make a prediction.
 
 Let's test it! For example, a dog image:
+
 ![dog](https://user-images.githubusercontent.com/46767764/51972964-9ccff400-24b7-11e9-8c11-b748382dedf7.jpg)
+
 and it recognized as:
+
 ![image](https://user-images.githubusercontent.com/46767764/51973625-fedd2900-24b8-11e9-8e2d-1c5893db2249.png)
 
 How about the grumpy cat? :
+
 ![cat](https://user-images.githubusercontent.com/46767764/51973674-1e745180-24b9-11e9-9fe3-60ed6041afda.jpg)
+
 and it recognized as:
+
 ![image](https://user-images.githubusercontent.com/46767764/51973720-3a77f300-24b9-11e9-9df9-cf8467ec375d.png)
 
 
