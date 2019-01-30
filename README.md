@@ -103,3 +103,13 @@ From here, we can be comfortable with 0 dense, and 3 convolutional layers. Resul
 <p align="center"> 
 <img src="https://user-images.githubusercontent.com/46767764/51965493-b4ea4800-24a4-11e9-95f6-28374b9c2f53.png">
 </p>
+
+#### The python file named "cnn2.py" covers step 5
+
+
+### Step 6: Use Trained Model
+
+
+
+#### The python file named "cnn_final.py" covers step 6
+
