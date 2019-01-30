@@ -109,15 +109,22 @@ From here, we can be comfortable with 0 dense, and 3 convolutional layers. Resul
 
 ### Step 6: Use Trained Model
 
-#### The python file named "cnn_final.py" covers step 6
+#### The python file named "cnn_final.py" covers step 6.
 The model we choose is 3 conv layers with 64x64 kernel sizes and without dense layer. It gives me:
 ```
 loss: 0.3009 - acc: 0.8705 - val_loss: 0.4452 - val_acc: 0.8009
 ```
-and we will take it. Now just upload some images to test our model. Again, we grayscaled, resized and reshaped our images. 
+and we will take it anyway.
+
+Now just upload some images to test our model. Again, we grayscaled, resized and reshaped our images. 
 Then load our model and make a prediction.
 
-#### The python file named "use_model.py" covers step 6.
+
+
+
+
+
+
 
 ### Finally, we are done. Thanks and I follow the tutorial on youtube "Deep Learning basics with Python, TensorFlow and Keras" covered by sentdex.
 
